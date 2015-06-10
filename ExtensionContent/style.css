@@ -1,0 +1,25 @@
+
+body {
+
+}
+
+button {
+height:25px;
+width : 70px;
+}
+
+#content {
+margin-right:auto;
+margin-left:auto;
+width:100%;
+}
+
+#input_text {
+	width : 65px;
+	height : 18px;
+}
+
+.block-div {
+	margin-top : 5px;
+	margin-bottom : 5px;
+}

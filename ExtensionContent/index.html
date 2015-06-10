@@ -1,0 +1,29 @@
+<!doctype html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<script src="./ext.js"></script>
+<script src="./lib/CSInterface-4.0.0.js"></script>
+
+<link id="ppstyle" rel="stylesheet" type="text/css" href="./style.css">
+<title>division path</title>
+</head>
+
+<body onLoad="onLoaded()">
+<div id="content">
+	<div class="block-div">
+		<button class="default" onClick="rolloverPathButton()">filp path</button>
+	</div>
+	<div class="block-div">
+		<button class="default" onClick="recordStartButton()">record start</button>
+		<button class="default" onClick="recordEndButton()">record end</button>
+	</div>
+	<div class="block-div">
+	 	<input class="input-cla" id="input_text" pattern="[0-9]" value="10"/>
+		<button class="default" id="btn_ILST" onClick="onClickButton('ILST')" disabled="true">division</button>
+	</div>
+</div>
+</body>
+
+</html>
