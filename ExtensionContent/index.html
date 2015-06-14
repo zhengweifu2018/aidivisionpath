@@ -3,8 +3,11 @@
 <html>
 <head>
 <meta charset="utf-8">
+<script src="./lib/jquery-1.9.1.js"></script>
 <script src="./ext.js"></script>
 <script src="./lib/CSInterface-4.0.0.js"></script>
+
+
 
 <link id="ppstyle" rel="stylesheet" type="text/css" href="./style.css">
 <title>division path</title>
@@ -12,16 +15,52 @@
 
 <body onLoad="onLoaded()">
 <div id="content">
-	<div class="block-div">
-		<button class="default" onClick="rolloverPathButton()">filp path</button>
+
+	<div class="block-div" style="text-align: center">
+		<div>
+			<button class="default top-btn" onClick="recordStartButton()">Start</button>
+			<span>Start numbers : <font size="3" id="font_start" color="#0f0">0</font></span>
+		</div>
+		<div >
+
+			<button class="default top-btn" onClick="recordEndButton()">End</button>
+			<span>End numbers : <font size="3" id="font_end" color="#0f0">0</font></span>
+		</div>
 	</div>
 	<div class="block-div">
-		<button class="default" onClick="recordStartButton()">record start</button>
-		<button class="default" onClick="recordEndButton()">record end</button>
+		<div style="text-align: center">
+			<span class="span-illustration">Rows: </span>
+		 	<input class="input-cla" id="row_input_text" value="5"/>
+
+			<span class="span-illustration">Each sections: </span>
+		 	<input class="input-cla" id="each_section_text" value="10"/>
+	 	</div>
+
+	 	<hr/>
+
+	 	<div id="element_section_group" style="text-align: center; height: 100px; overflow: scroll;">
+	 	<!--
+		<div>
+			<span class="span-illustration">1 row is </span>
+			<input class="input-cla" value="10"/>
+			<span class="span-illustration">sections</span>
+		</div>
+		<div>
+			<span class="span-illustration">2 row is </span>
+			<input class="input-cla" value="10"/>
+			<span class="span-illustration">sections</span>
+		</div>-->
+		</div>
+
+		<hr/>
+		<div style="text-align: center">
+			<span class="span-illustration">Section Radius: </span>
+			<input class="input-radius-cla" id="section_radius_input_text" value="2.0"/>
+		</div>
 	</div>
-	<div class="block-div">
-	 	<input class="input-cla" id="input_text" pattern="[0-9]" value="10"/>
-		<button class="default" id="btn_ILST" onClick="onClickButton('ILST')" disabled="true">division</button>
+	<div class="block-div" style="text-align: center">
+		<button class="default bottom-btn" id="btn_ILST" onClick="onClickButton('ILST')">Execute</button>
+		<button class="default bottom-btn" onClick="rolloverPathButton()">Filp Path</button>
 	</div>
 </div>
 </body>
