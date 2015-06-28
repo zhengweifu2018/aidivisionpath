@@ -264,8 +264,20 @@ function onClickButton(ppid) {
     	evalScript(jsfl);
     } else {
     	var division = $("#row_input_text").val();
-    	var extScript = "$._ext_" + ppid + ".DividePath.execute("+division+")";
+        var roundListString = "[" 
+        for(var i=1; i<parseInt(division)+1; i++) {
+            roundListString += recordElementGroups[i].children().get(1).value;
+            if(i == division) roundListString += "]";
+            else roundListString += "," 
+        }
+
+        var radius = $("#section_radius_input_text").val();
+    	var extScript = "$._ext_" + ppid + ".DividePath.execute("+division+"," + roundListString + "," + radius + ")";
 		evalScript(extScript);
+        evalScript('$._ext_ILST.DividePath.clear()');
+
+        $('#font_start').text("0");
+        $('#font_end').text("0");
 	}
 }
 
