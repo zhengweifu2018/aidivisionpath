@@ -258,7 +258,24 @@ function evalScript(script, callback) {
     new CSInterface().evalScript(script, callback);
 }
 
-function onClickButton(ppid) {
+function onClickButtonToRows(ppid) {
+    if(ppid == "FLPR"){
+    	var jsfl = 'fl.createDocument(); fl.getDocumentDOM().addNewText({left:100, top:100, right:300, bottom:300} , "Hello Flash!" ); ';
+    	evalScript(jsfl);
+    } else {
+    	var division = $("#row_input_text").val();
+        var roundListString = "[" 
+
+    	var extScript = "$._ext_" + ppid + ".DividePath.execute("+division+",[], 0)";
+		evalScript(extScript);
+        evalScript('$._ext_ILST.DividePath.clear()');
+
+        $('#font_start').text("0");
+        $('#font_end').text("0");
+	}
+}
+
+function onClickButtonToSections(ppid) {
     if(ppid == "FLPR"){
     	var jsfl = 'fl.createDocument(); fl.getDocumentDOM().addNewText({left:100, top:100, right:300, bottom:300} , "Hello Flash!" ); ';
     	evalScript(jsfl);
