@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<ExtensionManifest Version="4.0" ExtensionBundleId="com.lhh.AIDivisionPath" ExtensionBundleVersion="1.0.0"
-		ExtensionBundleName="AIDIvisionPath" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<ExtensionList>
-		<Extension Id="com.lhh.AIDivisionPath.extension1" Version="1.0" />
+<ExtensionManifest Version="4.0" ExtensionBundleId="com.lhh.JXAIDivisionPath" ExtensionBundleVersion="1.0.0"
+		ExtensionBundleName="JXAIDIvisionPath" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Author>
+		<![CDATA[lhh]]>
+	</Author>	<ExtensionList>
+		<Extension Id="com.lhh.JXAIDivisionPath.extension" Version="1.0" />
 	</ExtensionList>
 	<ExecutionEnvironment>
 		<HostList>
@@ -18,7 +20,7 @@
 		</RequiredRuntimeList>
 	</ExecutionEnvironment>
 	<DispatchInfoList>
-		<Extension Id="com.lhh.AIDivisionPath.extension1">
+		<Extension Id="com.lhh.JXAIDivisionPath.extension">
 			<DispatchInfo >
 				<Resources>
 				<MainPath>./index.html</MainPath>
@@ -29,12 +31,20 @@
 				</Lifecycle>
 				<UI>
 					<Type>Panel</Type>
-					<Menu>DivisionPath</Menu>
+					<Menu>JXDivisionPath</Menu>
 					<Geometry>
 						<Size>
-							<Height>800</Height>
-							<Width>200</Width>
+							<Height>600</Height>
+							<Width>600</Width>
 						</Size>
+						<MaxSize>
+							<Height>1000</Height>
+							<Width>1000</Width>
+						</MaxSize>
+						<MinSize>
+							<Height>600</Height>
+							<Width>600</Width>
+						</MinSize>
 					</Geometry>
 				</UI>
 			</DispatchInfo>

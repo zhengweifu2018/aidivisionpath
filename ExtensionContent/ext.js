@@ -5,7 +5,7 @@ function onLoaded() {
 	
     
     var appName = csInterface.hostEnvironment.appName;
-    
+
     if(appName != "FLPR"){
     	loadJSX();
     }    
@@ -221,7 +221,7 @@ function updateRowSectionsElement(parent, number, section_number) {
             recordElementGroups[each].hide();
         }
     }
-
+    console.log("uuuuuuu");
     for(i=1; i<number+1; i++) {
         if(recordElementGroups[i] === undefined) {
             createRowSectionsElement(parent, i, section_number);
@@ -298,7 +298,15 @@ function onClickButtonToSections(ppid) {
 	}
 }
 
-function recordStartButton() {
+function recordStartButton(ppid) {
+//    if(ppid == "FLPR"){
+//    	var jsfl = 'fl.createDocument(); fl.getDocumentDOM().addNewText({left:100, top:100, right:300, bottom:300} , "Hello Flash!" ); ';
+//    	evalScript(jsfl);
+//    } else {
+//		new CSInterface().evalScript('app.documents.length', function(result) {
+//			alert(result);
+//		});
+//    }
 	evalScript("$._ext_ILST.DividePath.start()", function(result) {
         $('#font_start').text(result);
     });
