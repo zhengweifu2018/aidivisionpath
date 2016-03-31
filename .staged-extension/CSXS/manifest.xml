@@ -35,7 +35,7 @@
 					<Geometry>
 						<Size>
 							<Height>600</Height>
-							<Width>600</Width>
+							<Width>800</Width>
 						</Size>
 						<MaxSize>
 							<Height>1000</Height>
@@ -43,7 +43,7 @@
 						</MaxSize>
 						<MinSize>
 							<Height>600</Height>
-							<Width>600</Width>
+							<Width>800</Width>
 						</MinSize>
 					</Geometry>
 				</UI>

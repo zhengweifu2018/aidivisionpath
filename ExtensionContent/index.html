@@ -7,8 +7,6 @@
 <script src="./ext.js"></script>
 <script src="./lib/CSInterface-4.0.0.js"></script>
 
-
-
 <link id="ppstyle" rel="stylesheet" type="text/css" href="./style.css">
 <title>division path</title>
 </head>
@@ -59,7 +57,8 @@
 		</div>
 	</div>
 	<div class="block-div" style="text-align: center">
-		<button class="default bottom-btn" id="btn_ILST_Row" onClick="onClickButtonToRows('ILST')">Draw To Rows</button>
+		<button class="default bottom-btn" id="btn_ILST_Row_Line" onClick="onClickButtonToRows('ILST', false)">Draw To Rows ( Line )</button>
+		<button class="default bottom-btn" id="btn_ILST_Row_Path" onClick="onClickButtonToRows('ILST', true)">Draw To Rows ( Path )</button>
 		<button class="default bottom-btn" id="btn_ILST_Section" onClick="onClickButtonToSections('ILST')">Draw To Sections</button>
 		<button class="default bottom-btn" onClick="rolloverPathButton()">Filp Path</button>
 	</div>

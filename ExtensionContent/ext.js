@@ -258,7 +258,8 @@ function evalScript(script, callback) {
     new CSInterface().evalScript(script, callback);
 }
 
-function onClickButtonToRows(ppid) {
+function onClickButtonToRows(ppid, isPath) {
+	isPath = !!isPath;
     if(ppid == "FLPR"){
     	var jsfl = 'fl.createDocument(); fl.getDocumentDOM().addNewText({left:100, top:100, right:300, bottom:300} , "Hello Flash!" ); ';
     	evalScript(jsfl);
@@ -266,7 +267,7 @@ function onClickButtonToRows(ppid) {
     	var division = $("#row_input_text").val();
         var roundListString = "[" 
 
-    	var extScript = "$._ext_" + ppid + ".DividePath.execute("+division+",[], 0)";
+    	var extScript = "$._ext_" + ppid + ".DividePath.execute("+division+",[], 0," + isPath + ")";
 		evalScript(extScript);
         evalScript('$._ext_ILST.DividePath.clear()');
 
@@ -289,7 +290,7 @@ function onClickButtonToSections(ppid) {
         }
 
         var radius = $("#section_radius_input_text").val();
-    	var extScript = "$._ext_" + ppid + ".DividePath.execute("+division+"," + roundListString + "," + radius + ")";
+    	var extScript = "$._ext_" + ppid + ".DividePath.execute("+division+"," + roundListString + "," + radius + ", true)";
 		evalScript(extScript);
         evalScript('$._ext_ILST.DividePath.clear()');
 
